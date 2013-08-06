@@ -1,4 +1,4 @@
-#!/usr/bin/env mode
+#!/usr/bin/env node
 /*
 Automaticallay grade file for the presence of specified HTML tags/attributes.
 Uses commander.js and cheerio. Teaches command line application development and basic DOM parsing.
@@ -18,11 +18,23 @@ references:
 		-https://developer.mozilla.org/en-US/docs/JSOn#SON_in_Firefox_2
 */
 
+
 var fs = require('fs');
+
+var rest = require('restler');
+
+rest.get('http://shielded-ocean-7490.herokuapp.com').on('complete', function(response, status) {
+console.log(response);});
+console.log("This will print while the webpage being fetcehd unless the URL  fetch is finished already.");
+
 var program = require('commander');
 var cheerio = require('cheerio');
 var HTMLFILE_DEFAULT = "index.html";
 var CHECKSFILE_DEFAULT = "checks.json";
+
+
+
+
 
 var assertFileExists = function(infine) {
 	var instr = infile.toString();
