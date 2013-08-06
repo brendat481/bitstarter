@@ -74,7 +74,7 @@ if(require.main == module) {
 	program
 		.option('-c, --checks <check_file>', 'checks.json', clone(assertFileExists), CHECKSFILE_DEFAULT)
 		.option('-f, --file <html_file>', 'index.html', clone(assertFileExists), HTMLFILE_DEFAULT)
-		.option('-u, --url <url>', 'http://shielded-ocean-7490.herokuapp.com', clone(assertFileExists), URL_DEFAULT)
+		.option('-u, --url <url>', 'http://shielded-ocean-7490.herokuapp.com')
 		.parse(process.argv);
 	var checkJson = checkHtmlFile(program.file, program.checks);
 	var outJson = JSON.stringify(checkJson, null, 4);
