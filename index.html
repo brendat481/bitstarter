@@ -63,7 +63,12 @@
 	line-height: 24px;
      }
 
-     /* Viedo pitcj and Action */
+    /* http://support.addthis.com/customer/portal/questions/1136093-share-buttons-in-center-position */
+     div.addthis_toolbox {
+         width:180px;
+         margin: 0 auto;
+     }
+    /* Viedo pitcj and Action */
      .pitch {
 	padding: 2.5% 0%;
      }
@@ -121,9 +126,9 @@
 		<div class="nav-collapse collapse">
 		  <ul class="nav">
 		     <li class="active"><a href="#">Home</a></li>
-		     <li><a class="#project">Projects</a><li>
-		     <li><a class="#projectowner">Project owner</a></li>
-		     <li><a class="#myprojects">My projects</a></li>
+		     <li><a href="#project">Projects</a><li>
+		     <li><a href="#projectowner">Project owner</a></li>
+		     <li><a href="#myprojects">My projects</a></li>
 		     <li><a href="#about">About</a></li>
 		     <li><a href="#contact">Contact Us</a></li>
                   </ul>
@@ -202,9 +207,20 @@
 			<div class="span8 offset2 social">
 				<!-- Social buttons are not insluded in default Bootstrap. -->
 	   			<!-- See: http://noizwaves.github.io/bootstrap-social-buttons -->
-	   			<button class="btn btn-twitter"><i class="icon-twitter"></i> I Twitter</button>
-	   			<button class="btn btn-facebook"><i class="icon-facebook"></i> I Facebook</i></button>
-	 		</div>
+	   			<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+				    <a class="addthis_button_preferred_1"></a>
+				    <a class="addthis_button_preferred_2"></a>
+				    <a class="addthis_button_preferred_3"></a>
+				    <a class="addthis_button_preferred_4"></a>
+				    <a class="addthis_button_compact"></a>
+				    <a class="addthis_counter addthis_bubble_style"></a>
+				</div>
+				<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5203b92e60802378"></script>
+				<!-- Addthis Button END -->
+
+	 	       </div>
       		</div>
     	</div>
        
